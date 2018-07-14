@@ -1,5 +1,5 @@
 // Imports: GraphQL Resolvers
-import RESOLVERS from './resolvers';
+// import RESOLVERS from './resolvers';
 
 
 // GraphQL: TypeDefs
@@ -12,15 +12,13 @@ const TYPEDEFS = `
     planet(id: ID): Planet
     planets: [Planet]
     species(id: ID): Species
-    species': [Species]
+    specieses: [Species]
     starship(id: ID): Starship
     starships: [Starship]
     vehicle(id: ID): Vehicle
     vehicles: [Vehicle]
   }
 
-  type Mutation {
-  }
 
   type Film {
     id: ID!
@@ -33,7 +31,7 @@ const TYPEDEFS = `
     species: [Species]
     starships: [Starship]
     vehicles: [Vehicle]
-    characters: [People]
+    characters: [Person]
     planets: [Planet]
     url: String
     created: String
@@ -73,7 +71,7 @@ const TYPEDEFS = `
     climate: String
     terrain: String
     surface_water: String
-    residents: [People]
+    residents: [Person]
     films: [Film]
     url: String
     created: String
@@ -93,7 +91,7 @@ const TYPEDEFS = `
     skin_colors: String
     language: String
     homeworld: String
-    people: [People]
+    people: [Person]
     films: [Film]
     url: String
     created: String
@@ -117,7 +115,7 @@ const TYPEDEFS = `
     cargo_capacity: String
     consumables: String 
     films: [Film]
-    pilots: [People]
+    pilots: [Person]
     url: String
     created: String
     edited: String
