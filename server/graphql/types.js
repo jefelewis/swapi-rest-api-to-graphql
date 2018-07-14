@@ -5,7 +5,18 @@ import RESOLVERS from './resolvers';
 // GraphQL: TypeDefs
 const TYPEDEFS = `
   type Query {
-
+    film(id: ID): Film
+    films: [Film]
+    person(id: ID): Person
+    persons: [Person]
+    planet(id: ID): Planet
+    planets: [Planet]
+    species(id: ID): Species
+    species': [Species]
+    starship(id: ID): Starship
+    starships: [Starship]
+    vehicle(id: ID): Vehicle
+    vehicles: [Vehicle]
   }
 
   type Mutation {
@@ -30,7 +41,7 @@ const TYPEDEFS = `
   }
 
 
-  type People {
+  type Person {
     id: ID!
     name: String
     birth_year: String
@@ -49,7 +60,7 @@ const TYPEDEFS = `
     created: String
     edited: String
   }
-  
+
 
   type Planet {
     id: ID!
@@ -115,22 +126,22 @@ const TYPEDEFS = `
 
   type Vehicle {
     id: ID!
-    name: 
-    model: 
-    vehicle_class: 
-    manufacturer: 
-    length: 
-    cost_in_credits: 
-    crew:
-    passengers: 
-    max_atmosphering_speed: 
-    cargo_capacity: 
-    consumables: 
-    films: 
-    pilots: 
-    url: 
-    created: 
-    edited: 
+    name: String
+    model: String
+    vehicle_class: String
+    manufacturer: String
+    length: String
+    cost_in_credits: String 
+    crew: String
+    passengers: String
+    max_atmosphering_speed: String
+    cargo_capacity: String
+    consumables: String
+    films: [Film]
+    pilots: [Person]
+    url: String
+    created: String
+    edited: String
   }
 `
 

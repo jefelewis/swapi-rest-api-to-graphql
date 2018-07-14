@@ -2,8 +2,8 @@
 const MONGOOSE = require('mongoose');
 
 // Imports: Mongoose Schemas
-const PEOPLESCHEMA = require('./peopleschema');
-const FILMSCHEMA = require('./filmschema');
+const PERSONSCHEMA = require('./person');
+const FILMSCHEMA = require('./film');
 
 
 // Mongoose: Schema
@@ -21,7 +21,7 @@ const SPECIESSCHEMA = new SCHEMA({
   skin_colors: {type: String, required: true},
   language: {type: String, required: true},
   homeworld: {type: String, required: true},
-  people: {type: [PEOPLESCHEMA], required: true},
+  people: {type: [PERSONSCHEMA], required: true},
   films: {type: [FILMSCHEMA], required: true},
   url: {type: String, required: true},
   created: {type: String, required: true},

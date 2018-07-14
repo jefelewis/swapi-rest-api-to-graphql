@@ -2,8 +2,8 @@
 const MONGOOSE = require('mongoose');
 
 // Imports: Mongoose Schemas
-const FILMSCHEMA = require('./filmschema');
-const PEOPLESCHEMA = require('./peopleschema');
+const FILMSCHEMA = require('./film');
+const PERSONSCHEMA = require('./person');
 
 
 // Mongoose: Schema
@@ -23,7 +23,7 @@ const VEHICLESCHEMA = new SCHEMA({
   cargo_capacity: {type: String, required: true},
   consumables: {type: String, required: true},
   films: {type: [FILMSCHEMA], required: true},
-  pilots: {type: [PEOPLESCHEMA], required: true},
+  pilots: {type: [PERSONSCHEMA], required: true},
   url: {type: String, required: true},
   created: {type: String, required: true},
   edited: {type: String, required: true}

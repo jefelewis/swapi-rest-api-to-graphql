@@ -2,11 +2,11 @@
 const MONGOOSE = require('mongoose');
 
 // Imports: Mongoose Schemas
-const SPECIESSCHEMA = require('./speciesschema');
-const STARSHIPSCHEMA = require('./starshipsschema');
-const VEHICLESCHEMA = require('./vehicleschema');
-const PEOPLESCHEMA = require('./peopleschema');
-const PLANETSCHEMA = require('./planetschema');
+const SPECIESSCHEMA = require('./species');
+const STARSHIPSCHEMA = require('./starship');
+const VEHICLESCHEMA = require('./vehicle');
+const PERSONSCHEMA = require('./person');
+const PLANETSCHEMA = require('./planet');
 
 
 // Mongoose: Schema
@@ -23,7 +23,7 @@ const FILMSCHEMA = new SCHEMA({
   species: {type: [SPECIESSCHEMA], required: true},
   starships: {type: [STARSHIPSCHEMA], required: true},
   vehicles: {type: [VEHICLESCHEMA], required: true},
-  characters: {type: [PEOPLESCHEMA], required: true},
+  characters: {type: [PERSONSCHEMA], required: true},
   planets: {type: [PLANETSCHEMA], required: true},
   url: {type: String, required: true},
   created: {type: String, required: true},

@@ -2,17 +2,17 @@
 const MONGOOSE = require('mongoose');
 
 // Imports: Mongoose Schemas
-const FILMSCHEMA = require('./filmschema');
-const SPECIESSCHEMA = require('./speciesschema');
-const STARSHIPSCHEMA = require('./starshipsschema');
-const VEHICLESCHEMA = require('./vehicleschema');
+const FILMSCHEMA = require('./film');
+const SPECIESSCHEMA = require('./species');
+const STARSHIPSCHEMA = require('./starship');
+const VEHICLESCHEMA = require('./vehicle');
 
 
 // Mongoose: Schema
 const SCHEMA = MONGOOSE.Schema;
 
 // Mongoose: Author Schema
-const PEOPLESCHEMA = new SCHEMA({
+const PERSONSCHEMA = new SCHEMA({
   name: {type: String, required: true},
   birth_year: {type: String, required: true},
   eye_color: {type: String, required: true},
@@ -33,4 +33,4 @@ const PEOPLESCHEMA = new SCHEMA({
 
 
 // Exports
-module.exports = MONGOOSE.model('People', PEOPLESCHEMA);
+module.exports = MONGOOSE.model('Person', PERSONSCHEMA);
