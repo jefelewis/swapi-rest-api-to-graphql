@@ -17,34 +17,31 @@ const TYPEDEFS = `
 
 
   type Film {
-    id: ID!
     title: String!
     episode_id: Int!
     opening_crawl: String
     director: String
     producer: String
     release_date: String
-    species: [Species]
-    starships: [Starship]
-    vehicles: [Vehicle]
     characters: [Person]
     planets: [Planet]
-    url: String
+    starships: [Starship]
+    vehicles: [Vehicle]
+    species: [Species]
     created: String
     edited: String
+    url: String
   }
 
-
   type Person {
-    id: ID!
     name: String
-    birth_year: String
-    eye_color: String
-    gender: String
-    hair_color: String
     height: String
     mass: String
+    hair_color: String
     skin_color: String
+    eye_color: String
+    birth_year: String
+    gender: String
     homeworld: String
     films: [Film]
     species: [Species]
@@ -57,85 +54,81 @@ const TYPEDEFS = `
 
 
   type Planet {
-    id: ID!
     name: String
-    diameter: String
     rotation_period: String 
     orbital_period: String
-    gravity: String
-    population: String
+    diameter: String
     climate: String
+    gravity: String
     terrain: String
     surface_water: String
+    population: String
     residents: [Person]
     films: [Film]
-    url: String
     created: String
     edited: String
+    url: String
   }
 
 
   type Species {
-    id: ID!
     name: String
     classification: String
     designation: String
     average_height: String
-    average_lifespan: String
-    eye_colors: String
-    hair_colors: String
     skin_colors: String
-    language: String
+    hair_colors: String
+    eye_colors: String
+    average_lifespan: String
     homeworld: String
+    language: String
     people: [Person]
     films: [Film]
-    url: String
     created: String
     edited: String
+    url: String
   }
 
 
   type Starship {
-    id: ID!
     name: String
     model: String
-    starship_class: String
     manufacturer: String
     cost_in_credits: String
     length: String
+    max_atmosphering_speed: String
     crew: String
     passengers: String
-    max_atmosphering_speed: String
-    hyperdrive_rating: String
-    MGLT: String
     cargo_capacity: String
     consumables: String 
-    films: [Film]
+    hyperdrive_rating: String
+    MGLT: String
+    starship_class: String
     pilots: [Person]
-    url: String
+    films: [Film]
     created: String
     edited: String
+    url: String
   }
 
 
   type Vehicle {
-    id: ID!
     name: String
     model: String
-    vehicle_class: String
     manufacturer: String
-    length: String
     cost_in_credits: String 
+    length: String
+    max_atmosphering_speed: String
     crew: String
     passengers: String
-    max_atmosphering_speed: String
     cargo_capacity: String
     consumables: String
-    films: [Film]
+    vehicle_class: String
     pilots: [Person]
-    url: String
+    films: [Film]
     created: String
     edited: String
+    url: String
   }
 `
 
