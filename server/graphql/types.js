@@ -1,22 +1,18 @@
-// Imports: GraphQL Resolvers
-// import RESOLVERS from './resolvers';
-
-
 // GraphQL: TypeDefs
 const TYPEDEFS = `
   type Query {
-    film(id: ID): Film
-    films: [Film]
-    person(id: ID): Person
-    persons: [Person]
-    planet(id: ID): Planet
-    planets: [Planet]
-    species(id: ID): Species
-    specieses: [Species]
-    starship(id: ID): Starship
-    starships: [Starship]
-    vehicle(id: ID): Vehicle
-    vehicles: [Vehicle]
+    getFilm(id: ID): Film
+    getAllFilms: [Film]
+    getPerson(id: ID): Person
+    getAllPersons: [Person]
+    getPlanet(id: ID): Planet
+    getAllPlanets: [Planet]
+    getSpecies(id: ID): Species
+    getAllSpecies: [Species]
+    getStarship(id: ID): Starship
+    getAllStarships: [Starship]
+    getVehicle(id: ID): Vehicle
+    getAllVehicles: [Vehicle]
   }
 
 
