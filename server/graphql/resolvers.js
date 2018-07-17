@@ -6,39 +6,75 @@ import fetch from 'node-fetch';
 const RESOLVERS = {
   Query: {
     // Search for a Film by ID
-    getFilm: async (parent, args) => {
-      const response = await 
+    getFilmByID: async (parent, args) => {
+      const response = await
       fetch(`https://swapi.co/api/films/${args.id}`);
       return response.json();
     },
+    // Search for all Films
+    getAllFilms: async (parent, args) => {
+      const response = await
+      fetch(`https://swapi.co/api/films/`);
+      return response.json();
+    },
     // Search for a Person by ID
-    getPerson: async (parent, args) => {
-      const response = await 
+    getPeopleByID: async (parent, args) => {
+      const response = await
       fetch(`https://swapi.co/api/people/${args.id}`);
       return response.json();
     },
+    // Search for all People
+    getAllPeople: async (parent, args) => {
+      const response = await
+      fetch(`https://swapi.co/api/people/`);
+      return response.json();
+    },
     // Search for a Planet by ID
-    getPlanet: async (parent, args) => {
-      const response = await 
+    getPlanetByID: async (parent, args) => {
+      const response = await
+      fetch(`https://swapi.co/api/planets/${args.id}`);
+      return response.json();
+    },
+    // Search for a Planet by ID
+    getAllPlanets : async (parent, args) => {
+      const response = await
       fetch(`https://swapi.co/api/planets/${args.id}`);
       return response.json();
     },
     // Search for a Species by ID
-    getSpecies: async (parent, args) => {
-      const response = await 
+    getSpeciesByID: async (parent, args) => {
+      const response = await
       fetch(`https://swapi.co/api/species/${args.id}`);
       return response.json();
     },
+    // Search for all Species
+    getAllSpecies: async (parent, args) => {
+      const response = await
+      fetch(`https://swapi.co/api/species/`);
+      return response.json();
+    },
     // Search for a Starship by ID
-    getStarship: async (parent, args) => {
-      const response = await 
+    getStarshipByID: async (parent, args) => {
+      const response = await
       fetch(`https://swapi.co/api/starships/${args.id}`);
       return response.json();
     },
+    // Search for all Starships
+    getAllStarships: async (parent, args) => {
+      const response = await
+      fetch(`https://swapi.co/api/starships/`);
+      return response.json();
+    },
     // Search for a Vehicle by ID
-    getVehicle: async (parent, args) => {
-      const response = await 
+    getVehicleByID: async (parent, args) => {
+      const response = await
       fetch(`https://swapi.co/api/vehicles/${args.id}`);
+      return response.json();
+    },
+    // Search for all vehicles
+    getAllVehicles: async (parent, args) => {
+      const response = await
+      fetch(`https://swapi.co/api/vehicles/`);
       return response.json();
     },
   }

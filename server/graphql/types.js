@@ -1,20 +1,61 @@
 // GraphQL: TypeDefs
 const TYPEDEFS = `
   type Query {
-    getFilm(id: ID): Film
-    getAllFilms: [Film]
-    getPerson(id: ID): Person
-    getAllPersons: [Person]
-    getPlanet(id: ID): Planet
-    getAllPlanets: [Planet]
-    getSpecies(id: ID): Species
-    getAllSpecies: [Species]
-    getStarship(id: ID): Starship
-    getAllStarships: [Starship]
-    getVehicle(id: ID): Vehicle
-    getAllVehicles: [Vehicle]
+    getFilmByID(id: ID): Film
+    getAllFilms: AllFilms
+    getPeopleByID(id: ID): People
+    getAllPeople: AllPeople
+    getPlanetByID(id: ID): Planet
+    getAllPlanets: AllPlanets
+    getSpeciesByID(id: ID): Species
+    getAllSpecies: AllSpecies
+    getStarshipByID(id: ID): Starship
+    getAllStarships: AllStarships
+    getVehicleByID(id: ID): Vehicle
+    getAllVehicles: AllVehicles
   }
 
+  type AllFilms {
+    count: Int
+    previous: String
+    next: String
+    results: [Film]
+  }
+
+  type AllPeople {
+    count: Int
+    previous: String
+    next: String
+    results: [People]
+  }
+
+  type AllPlanets {
+    count: Int
+    previous: String
+    next: String
+    results: [Planet]
+  }
+
+  type AllSpecies {
+    count: Int
+    previous: String
+    next: String
+    results: [Species]
+  }
+
+  type AllStarships {
+    count: Int
+    previous: String
+    next: String
+    results: [Starship]
+  }
+
+  type AllVehicles {
+    count: Int
+    previous: String
+    next: String
+    results: [Vehicle]
+  }
 
   type Film {
     title: String!
@@ -23,7 +64,7 @@ const TYPEDEFS = `
     director: String
     producer: String
     release_date: String
-    characters: [Person]
+    characters: [People]
     planets: [Planet]
     starships: [Starship]
     vehicles: [Vehicle]
@@ -33,7 +74,7 @@ const TYPEDEFS = `
     url: String
   }
 
-  type Person {
+  type People {
     name: String
     height: String
     mass: String
@@ -52,7 +93,6 @@ const TYPEDEFS = `
     edited: String
   }
 
-
   type Planet {
     name: String
     rotation_period: String 
@@ -63,13 +103,12 @@ const TYPEDEFS = `
     terrain: String
     surface_water: String
     population: String
-    residents: [Person]
+    residents: [People]
     films: [Film]
     created: String
     edited: String
     url: String
   }
-
 
   type Species {
     name: String
@@ -82,13 +121,12 @@ const TYPEDEFS = `
     average_lifespan: String
     homeworld: String
     language: String
-    people: [Person]
+    people: [People]
     films: [Film]
     created: String
     edited: String
     url: String
   }
-
 
   type Starship {
     name: String
@@ -104,13 +142,12 @@ const TYPEDEFS = `
     hyperdrive_rating: String
     MGLT: String
     starship_class: String
-    pilots: [Person]
+    pilots: [People]
     films: [Film]
     created: String
     edited: String
     url: String
   }
-
 
   type Vehicle {
     name: String
@@ -124,7 +161,7 @@ const TYPEDEFS = `
     cargo_capacity: String
     consumables: String
     vehicle_class: String
-    pilots: [Person]
+    pilots: [People]
     films: [Film]
     created: String
     edited: String
