@@ -1,6 +1,8 @@
 // Imports
 const PATH = require('path');
 const HTMLWEBPACKPLUGIN = require('html-webpack-plugin');
+require("babel-register");
+
 
 
 // Webpack Configuration
@@ -36,7 +38,8 @@ const CONFIG = {
   // Plugins
   plugins: [
     new HTMLWEBPACKPLUGIN({
-      template: './client/src/index.html'
+      template: './client/dist/index.html',
+      filename: 'index.html'
     })
   ]
 };
