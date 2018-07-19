@@ -1,82 +1,85 @@
 // Imports: Node Fetch
-import fetch from 'node-fetch';
+import axios from 'axios';
+
+// GraphQL: Pagination
+let pageNumber = 1;
 
 
 // GraphQL: Resolvers
 const RESOLVERS = {
   Query: {
     // Search for a Film by ID
-    getFilmByID: async (parent, args) => {
-      const response = await
-      fetch(`https://swapi.co/api/films/${args.id}`);
-      return response.json();
+    getFilmByID: (parent, args) => {
+      return axios.get(`https://swapi.co/api/films/${args.id}`)
+      .then(response => response.data)
+      .catch((error) => console.log(error))
     },
     // Search for all Films
-    getAllFilms: async (parent, args) => {
-      const response = await
-      fetch(`https://swapi.co/api/films/`);
-      return response.json();
+    getAllFilms: (parent, args) => {
+      return axios.get(`https://swapi.co/api/films/?page=${pageNumber}`)
+      .then(response => response.data)
+      .catch((error) => console.log(error))
     },
     // Search for a Person by ID
-    getPeopleByID: async (parent, args) => {
-      const response = await
-      fetch(`https://swapi.co/api/people/${args.id}`);
-      return response.json();
+    getPeopleByID: (parent, args) => {
+      return axios.get(`https://swapi.co/api/people/${args.id}`)
+      .then(response => response.data)
+      .catch((error) => console.log(error))
     },
     // Search for all People
-    getAllPeople: async (parent, args) => {
-      const response = await
-      fetch(`https://swapi.co/api/people/`);
-      return response.json();
+    getAllPeople: (parent, args) => {
+      return axios.get(`https://swapi.co/api/people/?page=${pageNumber}`)
+      .then(response => response.data)
+      .catch((error) => console.log(error))
     },
     // Search for a Planet by ID
-    getPlanetByID: async (parent, args) => {
-      const response = await
-      fetch(`https://swapi.co/api/planets/${args.id}`);
-      return response.json();
+    getPlanetByID: (parent, args) => {
+      return axios.get(`https://swapi.co/api/planets/${args.id}`)
+      .then(response => response.data)
+      .catch((error) => console.log(error))
     },
     // Search for a Planet by ID
-    getAllPlanets : async (parent, args) => {
-      const response = await
-      fetch(`https://swapi.co/api/planets/${args.id}`);
-      return response.json();
+    getAllPlanets: (parent, args) => {
+      return axios.get(`https://swapi.co/api/planets/?page=${pageNumber}`)
+      .then(response => response.data)
+      .catch((error) => console.log(error))
     },
     // Search for a Species by ID
-    getSpeciesByID: async (parent, args) => {
-      const response = await
-      fetch(`https://swapi.co/api/species/${args.id}`);
-      return response.json();
+    getSpeciesByID: (parent, args) => {
+      return axios.get(`https://swapi.co/api/species/${args.id}`)
+      .then(response => response.data)
+      .catch((error) => console.log(error))
     },
     // Search for all Species
-    getAllSpecies: async (parent, args) => {
-      const response = await
-      fetch(`https://swapi.co/api/species/`);
-      return response.json();
+    getAllSpecies: (parent, args) => {
+      return axios.get(`https://swapi.co/api/species/?page=${pageNumber}`)
+      .then(response => response.data)
+      .catch((error) => console.log(error))
     },
     // Search for a Starship by ID
-    getStarshipByID: async (parent, args) => {
-      const response = await
-      fetch(`https://swapi.co/api/starships/${args.id}`);
-      return response.json();
+    getStarshipByID: (parent, args) => {
+      return axios.get(`https://swapi.co/api/starships/${args.id}`)
+      .then(response => response.data)
+      .catch((error) => console.log(error))
     },
     // Search for all Starships
-    getAllStarships: async (parent, args) => {
-      const response = await
-      fetch(`https://swapi.co/api/starships/`);
-      return response.json();
+    getAllStarships: (parent, args) => {
+      return axios.get(`https://swapi.co/api/starships/?page=${pageNumber}`)
+      .then(response => response.data)
+      .catch((error) => console.log(error))
     },
     // Search for a Vehicle by ID
-    getVehicleByID: async (parent, args) => {
-      const response = await
-      fetch(`https://swapi.co/api/vehicles/${args.id}`);
-      return response.json();
+    getVehicleByID: (parent, args) => {
+      return axios.get(`https://swapi.co/api/vehicles/${args.id}`)
+      .then(response => response.data)
+      .catch((error) => console.log(error))
     },
     // Search for all vehicles
-    getAllVehicles: async (parent, args) => {
-      const response = await
-      fetch(`https://swapi.co/api/vehicles/`);
-      return response.json();
-    },
+    getAllVehicles: (parent, args) => {
+      return axios.get(`https://swapi.co/api/vehicles/?page=${pageNumber}`)
+      .then(response => response.data)
+      .catch((error) => console.log(error))
+    }
   }
 };
 
