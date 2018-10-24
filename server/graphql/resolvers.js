@@ -8,7 +8,7 @@ let pageNumber = 1;
 const RESOLVERS = {
   Query: {
     // Search for a Film by ID
-    getFilmByID: (parent, args) => {
+    getFilmById: (parent, args) => {
       return axios.get(`https://swapi.co/api/films/${args.id}`)
       .then(response => response.data)
       .catch((error) => console.log(error))
@@ -20,7 +20,7 @@ const RESOLVERS = {
       .catch((error) => console.log(error))
     },
     // Search for a Person by ID
-    getPeopleByID: (parent, args) => {
+    getPeopleById: (parent, args) => {
       return axios.get(`https://swapi.co/api/people/${args.id}`)
       .then(response => response.data)
       .catch((error) => console.log(error))
@@ -32,7 +32,7 @@ const RESOLVERS = {
       .catch((error) => console.log(error))
     },
     // Search for a Planet by ID
-    getPlanetByID: (parent, args) => {
+    getPlanetById: (parent, args) => {
       return axios.get(`https://swapi.co/api/planets/${args.id}`)
       .then(response => response.data)
       .catch((error) => console.log(error))
@@ -44,7 +44,7 @@ const RESOLVERS = {
       .catch((error) => console.log(error))
     },
     // Search for a Species by ID
-    getSpeciesByID: (parent, args) => {
+    getSpeciesById: (parent, args) => {
       return axios.get(`https://swapi.co/api/species/${args.id}`)
       .then(response => response.data)
       .catch((error) => console.log(error))
@@ -56,7 +56,7 @@ const RESOLVERS = {
       .catch((error) => console.log(error))
     },
     // Search for a Starship by ID
-    getStarshipByID: (parent, args) => {
+    getStarshipById: (parent, args) => {
       return axios.get(`https://swapi.co/api/starships/${args.id}`)
       .then(response => response.data)
       .catch((error) => console.log(error))
@@ -68,7 +68,7 @@ const RESOLVERS = {
       .catch((error) => console.log(error))
     },
     // Search for a Vehicle by ID
-    getVehicleByID: (parent, args) => {
+    getVehicleById: (parent, args) => {
       return axios.get(`https://swapi.co/api/vehicles/${args.id}`)
       .then(response => response.data)
       .catch((error) => console.log(error))

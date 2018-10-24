@@ -5,17 +5,17 @@ import { gql } from 'apollo-server-express';
 const TYPEDEFS = gql`
 
   type Query {
-    getFilmByID(id: ID): Film
+    getFilmById(id: ID): Film
     getAllFilms: AllFilms
-    getPeopleByID(id: ID): People
+    getPeopleById(id: ID): People
     getAllPeople: AllPeople
-    getPlanetByID(id: ID): Planet
+    getPlanetById(id: ID): Planet
     getAllPlanets: AllPlanets
-    getSpeciesByID(id: ID): Species
+    getSpeciesById(id: ID): Species
     getAllSpecies: AllSpecies
-    getStarshipByID(id: ID): Starship
+    getStarshipById(id: ID): Starship
     getAllStarships: AllStarships
-    getVehicleByID(id: ID): Vehicle
+    getVehicleById(id: ID): Vehicle
     getAllVehicles: AllVehicles
   }
 
