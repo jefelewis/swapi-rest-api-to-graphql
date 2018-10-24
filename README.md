@@ -9,17 +9,17 @@ A GraphQL version of the popular [Star Wars REST API](https://swapi.co)
 * [Babel](https://babeljs.io) - Transpiler/Transcompiler
 
 ## Getting Started
-**Install Dependencies:**
+**1. Install Dependencies:**
 ```
 npm install
 ```
 
-**Start Server:**
+**2. Start Server:**
 ```
 npm run server
 ```
 
-**Execute GraphQL Queries Here (Browser Automatically Opens On Server Start):**
+**3. Execute GraphQL Queries Here (Browser Automatically Opens On Server Start):**
 ```
 http://localhost:4000/graphql
 ```
