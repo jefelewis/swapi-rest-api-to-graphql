@@ -53,7 +53,7 @@ The full schema can be viewed by clicking on the green "Schema" button on the ri
       edited
     }
     planets {
-			name
+      name
       rotation_period
       orbital_period
       diameter
@@ -67,7 +67,7 @@ The full schema can be viewed by clicking on the green "Schema" button on the ri
       url
     }
     starships {
-			name
+      name
       model
       manufacturer
       cost_in_credits
@@ -85,7 +85,7 @@ The full schema can be viewed by clicking on the green "Schema" button on the ri
       url
     }
     vehicles {
-			name
+      name
       model
       manufacturer
       cost_in_credits
@@ -101,7 +101,7 @@ The full schema can be viewed by clicking on the green "Schema" button on the ri
       url
     }
     species {
-    	name
+      name
       classification
       designation
       average_height
