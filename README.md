@@ -26,7 +26,7 @@ http://localhost:4000/graphql
 
 ## View GraphQL Schema
 The full schema can be viewed by clicking on the green "Schema" button on the right side.
-![Schema](https://imgur.com/a/bPGmxJD)
+![Schema](https://imgur.com/a/bPGmxJD?raw=true)
 
 ## Example Queries
 **Get Star Wars Film By ID:**
