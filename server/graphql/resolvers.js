@@ -1,9 +1,8 @@
-// Imports: Node Fetch
+// Imports: Dependencies
 import axios from 'axios';
 
 // GraphQL: Pagination
 let pageNumber = 1;
-
 
 // GraphQL: Resolvers
 const RESOLVERS = {
