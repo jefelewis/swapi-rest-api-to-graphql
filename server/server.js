@@ -25,7 +25,7 @@ APP.listen(PORT, () => {
 });
 
 // Open URL
-opn('http://localhost:4000/graphql');
+opn(`http://localhost:${PORT}/graphql`);
 
 // Exports
 export default APP;
