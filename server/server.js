@@ -24,7 +24,7 @@ APP.listen(PORT, () => {
   console.log(`http://localhost:${PORT}/graphql`);
 });
 
-// Open URL
+// Open URL On Server Start
 opn(`http://localhost:${PORT}/graphql`);
 
 // Exports
