@@ -68,11 +68,11 @@ const TYPEDEFS = gql`
     director: String
     producer: String
     release_date: String
-    characters: [People]
-    planets: [Planet]
-    starships: [Starship]
-    vehicles: [Vehicle]
-    species: [Species]
+    characters: [String]
+    planets: [String]
+    starships: [String]
+    vehicles: [String]
+    species: [String]
     created: String
     edited: String
     url: String

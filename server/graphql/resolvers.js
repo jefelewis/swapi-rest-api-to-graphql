@@ -15,7 +15,7 @@ const RESOLVERS = {
     },
     // Search for all Films
     getAllFilms: (parent, args) => {
-      return axios.get(`https://swapi.co/api/films/?page=${pageNumber}`)
+      return axios.get(`https://swapi.co/api/films/`)
       .then(response => response.data)
       .catch((error) => console.log(error))
     },
