@@ -29,6 +29,34 @@ The full schema can be viewed by clicking on the green "Schema" button on the ri
 ![Schema](https://imgur.com/a/XIIOOOd.gif)
 
 ## Example Queries:
+**Get All Star Wars Films**
+```
+{
+  getAllFilms {
+    count
+    previous
+    next
+    results {
+      title
+      episode_id
+      opening_crawl
+      director
+      producer
+      release_date
+      characters
+      planets
+      starships
+      vehicles
+      species
+      created
+      edited
+      url
+    }
+  }
+}
+```
+
+
 **Get Star Wars Film By ID**
 ```
 {
@@ -39,82 +67,11 @@ The full schema can be viewed by clicking on the green "Schema" button on the ri
     director
     producer
     release_date
-    characters {
-      name
-      height
-      mass
-      hair_color
-      skin_color
-      eye_color
-      birth_year
-      homeworld
-      url
-      created
-      edited
-    }
-    planets {
-      name
-      rotation_period
-      orbital_period
-      diameter
-      climate
-      gravity
-      terrain
-      surface_water
-      population
-      created
-      edited
-      url
-    }
-    starships {
-      name
-      model
-      manufacturer
-      cost_in_credits
-      length
-      max_atmosphering_speed
-      crew
-      passengers
-      cargo_capacity
-      consumables
-      hyperdrive_rating
-      MGLT
-      starship_class
-      created
-      edited
-      url
-    }
-    vehicles {
-      name
-      model
-      manufacturer
-      cost_in_credits
-      length
-      max_atmosphering_speed
-      crew
-      passengers
-      cargo_capacity
-      consumables
-      vehicle_class
-      created
-      edited
-      url
-    }
-    species {
-      name
-      classification
-      designation
-      average_height
-      skin_colors
-      hair_colors
-      eye_colors
-      average_lifespan
-      homeworld
-      language
-      created
-      edited
-      url
-    }
+    characters 
+    planets 
+    starships
+    vehicles
+    species
     created
     edited
     url
